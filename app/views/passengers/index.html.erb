@@ -1,0 +1,25 @@
+<h1 style="text-align: center">Passengers</h1>
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-8 col-xs-offset-2">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Passport</th>
+					</tr>
+				</thead>
+				<tbody>
+				<% @flight.passengers.each do |passenger| %>
+					<tr>
+						<td><%= passenger.name %></td>
+						<td><%= passenger.passport %></td>
+					</tr>
+				<% end %>
+				</tbody>
+			</table>
+			<%= link_to "Back", flights_path %>
+		</div>
+	</div>
+</div>
